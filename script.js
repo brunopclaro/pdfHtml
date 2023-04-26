@@ -8,7 +8,7 @@ document.getElementById("convert").addEventListener("click", async function () {
   const pdfData = await pdfFile.arrayBuffer();
   const htmlOutput = document.getElementById("htmlOutput");
   
-  pdf2htmlEX(pdfData, { worker: false }, function (err, htmlText) {
+  pdf(pdfData, { worker: false }, function (err, htmlText) {
     if (err) {
       console.error(err);
       alert("Failed to convert the PDF.");
